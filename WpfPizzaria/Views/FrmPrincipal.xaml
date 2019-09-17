@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfPizzaria.Views.FrmPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPizzaria.Views"
+        mc:Ignorable="d"
+        Title="FrmPrincipal" Height="610.5" Width="1143.5">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+        </Grid.Background>
+        <!--HEADER-->
+        <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31"/>
+        <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="936" Background="#FF293541"/>
+        <!--MENU ASIDE-->
+        <Menu HorizontalAlignment="Left" Height="472" VerticalAlignment="Top" Width="200" Margin="0,107,0,0">
+            <MenuItem Header="LOGIN" Height="60" Width="200"/>
+            <MenuItem Header="CADASTRAR" Height="60" Width="200">
+                <MenuItem Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
+            </MenuItem>
+            <MenuItem Header="LISTAR" Height="60" Width="200">
+                <MenuItem Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
+            </MenuItem>
+            <MenuItem Header="PEDIDO" Height="60" Width="200">
+                <MenuItem Header="Pedido" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem Header="Orçamento" HorizontalAlignment="Left" Height="40" Width="194" />
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
