@@ -11,7 +11,9 @@
             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
         </Grid.Background>
         <!--HEADER-->
-        <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31"/>
+        <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
+            <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\logo.png"/>
+        </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="936" Background="#FF293541"/>
         <!--MENU ASIDE-->
         <Menu HorizontalAlignment="Left" Height="472" VerticalAlignment="Top" Width="200" Margin="0,107,0,0">
@@ -30,7 +32,6 @@
                 <MenuItem Header="Pedido" HorizontalAlignment="Left" Height="40" Width="194"/>
                 <MenuItem Header="Orçamento" HorizontalAlignment="Left" Height="40" Width="194" />
             </MenuItem>
-        </Menu>
-
+        </Menu>        
     </Grid>
 </Window>
