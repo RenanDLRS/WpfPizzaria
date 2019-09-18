@@ -10,28 +10,36 @@
         <Grid.Background>
             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
         </Grid.Background>
+
         <!--HEADER-->
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
             <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\logo.png"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="936" Background="#FF293541"/>
+
         <!--MENU ASIDE-->
-        <Menu HorizontalAlignment="Left" Height="472" VerticalAlignment="Top" Width="200" Margin="0,107,0,0">
-            <MenuItem Header="LOGIN" Height="60" Width="200"/>
-            <MenuItem Header="CADASTRAR" Height="60" Width="200">
-                <MenuItem Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
-                <MenuItem Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
-                <MenuItem Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
+        <Menu HorizontalAlignment="Left" Height="442" VerticalAlignment="Top" Width="200" Margin="0,107,0,0">
+            <MenuItem x:Name="login" Header="LOGIN" Height="60" Width="200"/>
+            <MenuItem x:Name="cadastrar" Header="CADASTRAR" Height="60" Width="200">
+                <MenuItem x:Name="cadastrarCliente" Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="cadastrarFuncionario" Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="cadastrarFornecedor" Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
             </MenuItem>
-            <MenuItem Header="LISTAR" Height="60" Width="200">
-                <MenuItem Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
-                <MenuItem Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
-                <MenuItem Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
+            <MenuItem x:Name="listar" Header="LISTAR" Height="60" Width="200">
+                <MenuItem x:Name="listarCliente" Header="Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="listarFuncionario" Header="Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="listarFornecedor" Header="Fornecedor" HorizontalAlignment="Left" Height="40" Width="194" />
             </MenuItem>
-            <MenuItem Header="PEDIDO" Height="60" Width="200">
-                <MenuItem Header="Pedido" HorizontalAlignment="Left" Height="40" Width="194"/>
-                <MenuItem Header="Orçamento" HorizontalAlignment="Left" Height="40" Width="194" />
+            <MenuItem x:Name="pedido" Header="PEDIDO" Height="60" Width="200">
+                <MenuItem x:Name="fazerPedido" Header="Pedido" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="fazerOrcamento" Header="Orçamento" HorizontalAlignment="Left" Height="40" Width="194" />
             </MenuItem>
-        </Menu>        
+        </Menu>
+
+        <!--FOOTER-->
+        <StackPanel HorizontalAlignment="Left" Height="25" Margin="0,548,0,0" VerticalAlignment="Top" Width="1136" Background="#FF293541">
+            <Label Content="BigPizza &#169; - Todos direitos reservados" HorizontalAlignment="Center" VerticalAlignment="Top" Width="217" Height="25" />
+        </StackPanel>
+       
     </Grid>
 </Window>

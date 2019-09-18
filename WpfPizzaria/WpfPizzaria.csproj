@@ -59,6 +59,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Bebida.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Ingrediente.cs" />
+    <Compile Include="Models\ItemSabor.cs" />
+    <Compile Include="Models\ItemVenda.cs" />
+    <Compile Include="Models\Pizza.cs" />
+    <Compile Include="Models\Sabor.cs" />
+    <Compile Include="Models\Venda.cs" />
     <Compile Include="Views\FrmPrincipal.xaml.cs">
       <DependentUpon>FrmPrincipal.xaml</DependentUpon>
     </Compile>
@@ -97,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
