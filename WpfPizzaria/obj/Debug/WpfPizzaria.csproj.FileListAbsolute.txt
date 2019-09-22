@@ -13,3 +13,5 @@ C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizz
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\WpfPizzaria.pdb
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmPrincipal.g.cs
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmPrincipal.baml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarCliente.g.cs
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarCliente.baml

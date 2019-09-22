@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Models\Bebida.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Enums\CargoFuncionario.cs" />
     <Compile Include="Models\Enums\StatusPedido.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\ItemSabor.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\Sabor.cs" />
     <Compile Include="Models\Venda.cs" />
+    <Compile Include="Views\FrmCadastrarCliente.xaml.cs">
+      <DependentUpon>FrmCadastrarCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmPrincipal.xaml.cs">
       <DependentUpon>FrmPrincipal.xaml</DependentUpon>
     </Compile>
@@ -99,6 +103,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\FrmCadastrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FrmPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

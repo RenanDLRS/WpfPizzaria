@@ -18,7 +18,6 @@ namespace WpfPizzaria.Models {
             Cliente = new Cliente();
             Funcionario = new Funcionario();
             CriadoEm = DateTime.Now;
-            statusPedido = StatusPedido.PagamentoPendente;
         }
     }
 }

@@ -12,13 +12,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfPizzaria.Views {
+namespace WpfPizzaria.Views
+{
     /// <summary>
     /// Interaction logic for FrmPrincipal.xaml
     /// </summary>
-    public partial class FrmPrincipal : Window {
-        public FrmPrincipal() {
+    public partial class FrmPrincipal : Window
+    {
+        public FrmPrincipal()
+        {
             InitializeComponent();
         }
+
+        //Função para fechar janela principal
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (MessageBox.Show("Deseja fechar a janela?", "WPF Vendas",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        //Função do menu cliente (cadastrar)
+        private void CadastrarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarCliente frmCliente = new FrmCadastrarCliente();
+            frmCliente.ShowDialog();
+        }
+
     }
 }

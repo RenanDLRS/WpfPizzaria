@@ -18,7 +18,7 @@ namespace WpfPizzaria.Models {
 
         //toString
         public override string ToString() {
-            return $"Nome: {Nome}, Cpf: {Cpf}, Endereço: {Endereco}";
+            return $"Nome: {Nome}, Cpf: {Cpf}, Telefone{Telefone}, Endereço: {Endereco}, Data de cadastro: {CriadoEm}";
         }
     }
 }

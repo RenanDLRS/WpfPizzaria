@@ -15,11 +15,10 @@ namespace WpfPizzaria.Models {
 
         public Funcionario() {
             CriadoEm = DateTime.Now;
-            cargoFuncionario = CargoFuncionario.Atendente;
         }
 
         public override string ToString() {
-            return $"Nome: {Nome}, Cpf: {Cpf}";
+            return $"Nome: {Nome}, Cpf: {Cpf}, Cargo: {cargoFuncionario}, Data: {CriadoEm}";
         }
     }
 }
