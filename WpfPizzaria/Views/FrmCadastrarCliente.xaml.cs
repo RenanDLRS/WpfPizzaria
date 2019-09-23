@@ -33,7 +33,8 @@ namespace WpfPizzaria.Views
                 Nome = txtNome.Text,
                 Cpf = txtCpf.Text,
                 Telefone = txtTelefone.Text,
-                Endereco = txtEndereco.Text
+                Endereco = txtEndereco.Text,
+                CriadoEm = DateTime.Now
             };
 
             if (ClienteDAO.CadastrarCliente(cliente))

@@ -71,6 +71,11 @@
     </Compile>
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
+    <Compile Include="Migrations\201909232031113_CriandoBanco.cs" />
+    <Compile Include="Migrations\201909232031113_CriandoBanco.designer.cs">
+      <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bebida.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Context.cs" />
@@ -103,6 +108,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201909232031113_CriandoBanco.resx">
+      <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
