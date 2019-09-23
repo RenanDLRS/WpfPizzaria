@@ -1,9 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WpfPizzaria.Models {
+
+    [Table("Clientes")]
     class Cliente {
 
         //Propriedades
+        [Key]
         public int ClienteId { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }

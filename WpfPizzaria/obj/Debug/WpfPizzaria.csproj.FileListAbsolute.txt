@@ -15,3 +15,8 @@ C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizz
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmPrincipal.baml
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarCliente.g.cs
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarCliente.baml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\bin\Debug\EntityFramework.dll
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\bin\Debug\EntityFramework.xml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\WpfPizzaria.csproj.CopyComplete
