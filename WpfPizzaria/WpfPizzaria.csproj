@@ -69,6 +69,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Models\Bebida.cs" />
     <Compile Include="Models\Cliente.cs" />

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfPizzaria.DAL;
+using WpfPizzaria.Models;
 
 namespace WpfPizzaria.Views
 {
@@ -22,6 +24,26 @@ namespace WpfPizzaria.Views
         public FrmCadastrarCliente()
         {
             InitializeComponent();
+        }
+
+        private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            Cliente cliente = new Cliente
+            {
+                Nome = txtNome.Text,
+                Cpf = txtCpf.Text,
+                Telefone = txtTelefone.Text,
+                Endereco = txtEndereco.Text
+            };
+
+            if (ClienteDAO.CadastrarCliente(cliente))
+            {
+                MessageBox.Show("Cliente cadastrado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Cliente já cadastrado!!!");
+            }           
         }
     }
 }
