@@ -27,5 +27,10 @@ namespace WpfPizzaria.DAL
         {
             return ctx.Clientes.FirstOrDefault(x => x.Cpf.Equals(cliente.Cpf));
         }
+
+        public static List<Cliente> ListarClientes()
+        {
+            return ctx.Clientes.ToList();
+        }
     }
 }

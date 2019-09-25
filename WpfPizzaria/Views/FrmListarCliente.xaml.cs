@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfPizzaria.DAL;
 
 namespace WpfPizzaria.Views
 {
@@ -22,6 +23,11 @@ namespace WpfPizzaria.Views
         public FrmListarCliente()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtaClientes.ItemsSource = ClienteDAO.ListarClientes();
         }
     }
 }

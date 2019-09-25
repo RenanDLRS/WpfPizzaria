@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPizzaria.Views"
         mc:Ignorable="d"
-        Title="FrmPrincipal" Height="610.5" Width="1143.5" Closing="Window_Closing">
+        Title="FrmPrincipal" Height="610.5" Width="1000" Closing="Window_Closing">
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
@@ -15,17 +15,17 @@
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
             <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\logo.png"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="936" Background="#FF293541">
+        <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="792" Background="#FF293541">
             <StackPanel Height="100"/>
         </StackPanel>
 
         <!--MENU ASIDE-->
         <Menu HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="200" Margin="0,107,0,0">
-            <MenuItem x:Name="login" Header="LOGIN" Height="73" Width="200"/>           
+            <MenuItem x:Name="login" Header="LOGIN" Height="73" Width="200"/>
             <MenuItem x:Name="cliente" Header="CLIENTE" Height="73" Width="200">
                 <MenuItem x:Name="cadastrarCliente" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="CadastrarCliente_Click" />
-                <MenuItem x:Name="listarCliente" Header="Listar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="ListarCliente_Click"/>                
-            </MenuItem>            
+                <MenuItem x:Name="listarCliente" Header="Listar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="ListarCliente_Click"/>
+            </MenuItem>
             <MenuItem x:Name="funcionario" Header="FUNCIONARIO" Height="73" Width="200">
                 <MenuItem x:Name="cadastrarFuncionario" Header="Cadastrar Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
                 <MenuItem x:Name="listarFuncionario" Header="Listar Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
@@ -33,18 +33,18 @@
             <MenuItem x:Name="pedido" Header="PEDIDO" Height="73" Width="200">
                 <MenuItem x:Name="fazerPedido" Header="Realizar pedido" Height="40" Width="194"></MenuItem>
                 <MenuItem x:Name="listarPedido" Header="Verificar pedidos" Height="40" Width="194"></MenuItem>
-            </MenuItem>            
+            </MenuItem>
             <MenuItem x:Name="fazerOrcamento" Header="ORÇAMENTO" Height="73" Width="200"/>
             <MenuItem x:Name="cadastrar" Header="CADASTRAR" Height="73" Width="200">
                 <MenuItem x:Name="cadastrarSabor" Header="SABORES" Height="40" Width="194"/>
                 <MenuItem x:Name="cadastrarBebida" Header="BEBIDAS" Height="40" Width="194"/>
-            </MenuItem>            
+            </MenuItem>
         </Menu>
 
         <!--FOOTER-->
-        <StackPanel HorizontalAlignment="Left" Height="25" Margin="0,548,0,0" VerticalAlignment="Top" Width="1136" Background="#FF293541">
+        <StackPanel HorizontalAlignment="Left" Height="25" Margin="0,548,0,0" VerticalAlignment="Top" Width="992" Background="#FF293541">
             <Label Content="BigPizza &#169; - Todos direitos reservados" HorizontalAlignment="Center" VerticalAlignment="Top" Width="217" Height="25" />
         </StackPanel>
-       
+        <Image HorizontalAlignment="Left" Height="441" Margin="200,107,0,0" VerticalAlignment="Top" Width="792" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\background.jpg"/>
     </Grid>
 </Window>

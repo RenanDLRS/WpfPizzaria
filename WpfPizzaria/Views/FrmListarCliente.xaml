@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPizzaria.Views"
         mc:Ignorable="d"
-        Title="FrmListarCliente" Height="450" Width="800">
+        Title="FrmListarCliente" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <!--HEADER-->
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
@@ -13,7 +13,7 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="312" Margin="0,107,0,0" VerticalAlignment="Top" Width="200" Background="#FF293545"/>
         <Label Content="Listar Cliente" HorizontalAlignment="Left" Margin="324,39,0,0" VerticalAlignment="Top" Width="312" Height="68" FontFamily="Comic Sans MS" FontSize="36"/>
-        <DataGrid HorizontalAlignment="Left" Height="312" Margin="200,107,0,0" VerticalAlignment="Top" Width="592"/>
+        <DataGrid x:Name="dtaClientes" HorizontalAlignment="Left" Height="228" Margin="244,142,0,0" VerticalAlignment="Top" Width="500"/>
 
 
     </Grid>
