@@ -9,14 +9,15 @@
     <Grid>
         <!--HEADER-->
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
-            <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\logo.png"/>
+            <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\logo.png"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="312" Margin="0,107,0,0" VerticalAlignment="Top" Width="200" Background="#FF293545"/>
         <Label Content="Cadastrar Cliente" HorizontalAlignment="Left" Margin="324,39,0,0" VerticalAlignment="Top" Width="312" Height="68" FontFamily="Comic Sans MS" FontSize="36"/>
 
-        <Label Content="Nome:" HorizontalAlignment="Left" Margin="205,112,0,0" VerticalAlignment="Top" Width="64"/>
+        <!--Body-->
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="205,112,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="269,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-
+        
         <Label Content="CPF" HorizontalAlignment="Left" Margin="205,150,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="269,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
 
@@ -30,7 +31,9 @@
         <TextBox x:Name="txtData" HorizontalAlignment="Left" Height="23" Margin="269,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
         <Button x:Name="btnCadastrar" Content="CADASTRAR" HorizontalAlignment="Left" Margin="269,314,0,0" VerticalAlignment="Top" Width="200" Height="86" Click="BtnCadastrar_Click"/>
 
-        <Image HorizontalAlignment="Left" Height="288" Margin="508,112,0,0" VerticalAlignment="Top" Width="228" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\chef.png"/>
+        <Image HorizontalAlignment="Left" Height="288" Margin="508,112,0,0" VerticalAlignment="Top" Width="228" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\chef.png"/>
+
+        <!--Footer-->
 
     </Grid>
 </Window>

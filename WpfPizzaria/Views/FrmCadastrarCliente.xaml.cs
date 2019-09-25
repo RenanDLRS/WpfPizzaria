@@ -24,6 +24,7 @@ namespace WpfPizzaria.Views
         public FrmCadastrarCliente()
         {
             InitializeComponent();
+            txtData.Text = DateTime.Now.ToString();
         }
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)

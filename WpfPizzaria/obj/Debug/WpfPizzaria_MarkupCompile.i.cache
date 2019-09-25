@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\App.xaml
-2432782645
+31869498462
 
-231876417908
+24-774383414
 16-2000046054
-Views\FrmCadastrarCliente.xaml;Views\FrmPrincipal.xaml;
+Views\FrmCadastrarCliente.xaml;Views\FrmListarCliente.xaml;Views\FrmPrincipal.xaml;
 
-False
+True
 

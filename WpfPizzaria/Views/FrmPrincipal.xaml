@@ -13,7 +13,7 @@
 
         <!--HEADER-->
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
-            <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\logo.png"/>
+            <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\logo.png"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="107" Margin="200,0,0,0" VerticalAlignment="Top" Width="936" Background="#FF293541">
             <StackPanel Height="100"/>
@@ -24,7 +24,7 @@
             <MenuItem x:Name="login" Header="LOGIN" Height="73" Width="200"/>           
             <MenuItem x:Name="cliente" Header="CLIENTE" Height="73" Width="200">
                 <MenuItem x:Name="cadastrarCliente" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="CadastrarCliente_Click" />
-                <MenuItem x:Name="listarCliente" Header="Listar Cliente" HorizontalAlignment="Left" Height="40" Width="194"/>                
+                <MenuItem x:Name="listarCliente" Header="Listar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="ListarCliente_Click"/>                
             </MenuItem>            
             <MenuItem x:Name="funcionario" Header="FUNCIONARIO" Height="73" Width="200">
                 <MenuItem x:Name="cadastrarFuncionario" Header="Cadastrar Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>

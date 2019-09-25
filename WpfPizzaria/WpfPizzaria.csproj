@@ -90,6 +90,9 @@
     <Compile Include="Views\FrmCadastrarCliente.xaml.cs">
       <DependentUpon>FrmCadastrarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmListarCliente.xaml.cs">
+      <DependentUpon>FrmListarCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmPrincipal.xaml.cs">
       <DependentUpon>FrmPrincipal.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\FrmCadastrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FrmListarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
