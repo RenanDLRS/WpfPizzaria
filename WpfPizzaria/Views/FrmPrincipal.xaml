@@ -27,7 +27,7 @@
                 <MenuItem x:Name="listarCliente" Header="Listar Cliente" HorizontalAlignment="Left" Height="40" Width="194" Click="ListarCliente_Click"/>
             </MenuItem>
             <MenuItem x:Name="funcionario" Header="FUNCIONARIO" Height="73" Width="200">
-                <MenuItem x:Name="cadastrarFuncionario" Header="Cadastrar Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
+                <MenuItem x:Name="cadastrarFuncionario" Header="Cadastrar Funcionario" HorizontalAlignment="Left" Height="40" Width="194" Click="CadastrarFuncionario_Click"/>
                 <MenuItem x:Name="listarFuncionario" Header="Listar Funcionario" HorizontalAlignment="Left" Height="40" Width="194"/>
             </MenuItem>
             <MenuItem x:Name="pedido" Header="PEDIDO" Height="73" Width="200">

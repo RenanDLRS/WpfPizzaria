@@ -70,10 +70,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DAL\ClienteDAO.cs" />
+    <Compile Include="DAL\FuncionarioDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Migrations\201909232031113_CriandoBanco.cs" />
     <Compile Include="Migrations\201909232031113_CriandoBanco.designer.cs">
       <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909262033348_CriandoTabelaFuncionarios.cs" />
+    <Compile Include="Migrations\201909262033348_CriandoTabelaFuncionarios.designer.cs">
+      <DependentUpon>201909262033348_CriandoTabelaFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bebida.cs" />
@@ -89,6 +94,9 @@
     <Compile Include="Models\Venda.cs" />
     <Compile Include="Views\FrmCadastrarCliente.xaml.cs">
       <DependentUpon>FrmCadastrarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCadastrarFuncionario.xaml.cs">
+      <DependentUpon>FrmCadastrarFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmListarCliente.xaml.cs">
       <DependentUpon>FrmListarCliente.xaml</DependentUpon>
@@ -114,6 +122,9 @@
     <EmbeddedResource Include="Migrations\201909232031113_CriandoBanco.resx">
       <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262033348_CriandoTabelaFuncionarios.resx">
+      <DependentUpon>201909262033348_CriandoTabelaFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -129,6 +140,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\FrmCadastrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FrmCadastrarFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -23,3 +23,6 @@ C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizz
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\WpfPizzaria.Migrations.CriandoBanco.resources
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmListarCliente.g.cs
 C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmListarCliente.baml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarFuncionario.g.cs
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\Views\FrmCadastrarFuncionario.baml
+C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\WpfPizzaria\obj\Debug\WpfPizzaria.Migrations.CriandoTabelaFuncionarios.resources

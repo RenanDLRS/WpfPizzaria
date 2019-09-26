@@ -47,5 +47,11 @@ namespace WpfPizzaria.Views
             FrmListarCliente frmListar = new FrmListarCliente();
             frmListar.ShowDialog();
         }
+
+        private void CadastrarFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarFuncionario frmFuncionario = new FrmCadastrarFuncionario();
+            frmFuncionario.ShowDialog();
+        }
     }
 }
