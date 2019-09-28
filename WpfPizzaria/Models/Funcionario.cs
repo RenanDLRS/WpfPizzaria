@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using WpfPizzaria.Models.Enums;
 
 namespace WpfPizzaria.Models {
-
     [Table("Funcionarios")]
     class Funcionario {
 

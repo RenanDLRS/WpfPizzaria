@@ -48,10 +48,52 @@ namespace WpfPizzaria.Views
             frmListar.ShowDialog();
         }
 
+        private void cadastrarBebida_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarBebida frmBebida = new FrmCadastrarBebida();
+            frmBebida.ShowDialog();
+        }
+
+        private void listarBebida_Click(object sender, RoutedEventArgs e)
+        {
+            FrmListarBebida frmListar = new FrmListarBebida();
+            frmListar.ShowDialog();
+        }
+
+        private void cadastrarSabor_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarSabor frmSabor = new FrmCadastrarSabor();
+            frmSabor.ShowDialog();
+        }
+
+        private void listarSabor_Click(object sender, RoutedEventArgs e)
+        {
+            FrmListarSabor frmListar = new FrmListarSabor();
+            frmListar.ShowDialog();
+        }
+
         private void CadastrarFuncionario_Click(object sender, RoutedEventArgs e)
         {
-            FrmCadastrarFuncionario frmFuncionario = new FrmCadastrarFuncionario();
-            frmFuncionario.ShowDialog();
+            FrmCadastrarFuncionario frmCadastrar = new FrmCadastrarFuncionario();
+            frmCadastrar.Show();
+        }
+
+        private void cadastrarTamanho_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarTamanho frmTamanho = new FrmCadastrarTamanho();
+            frmTamanho.ShowDialog();
+        }
+
+        private void listarTamanho_Click(object sender, RoutedEventArgs e)
+        {
+            FrmListarTamanho frmListar = new FrmListarTamanho();
+            frmListar.ShowDialog();
+        }
+
+        private void FazerPedido_Click(object sender, RoutedEventArgs e)
+        {
+            FrmPedido frmPedido = new FrmPedido();
+            frmPedido.ShowDialog();
         }
     }
 }

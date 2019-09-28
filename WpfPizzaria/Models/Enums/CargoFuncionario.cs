@@ -8,8 +8,8 @@ namespace WpfPizzaria.Models.Enums
 {
     enum CargoFuncionario : int
     {
-        Gerente =0,
+        Atendente =0,
         Cozinheiro =1,
-        Atendente =2
+        Gerente =2
     }
 }

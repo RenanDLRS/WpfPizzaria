@@ -8,10 +8,8 @@ namespace WpfPizzaria.Models {
     class Pizza {
 
         public List<ItemSabor> Sabor { get; set; } //Lista 1,2,3 ou 4 sabores
-        public DateTime CriadoEm { get; set; }
-
+        public Tamanho Tamanho { get; set; } 
         public Pizza() {
-            CriadoEm = DateTime.Now;
         }
     }
 }

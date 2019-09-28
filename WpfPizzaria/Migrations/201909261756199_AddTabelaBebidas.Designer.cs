@@ -7,13 +7,13 @@ namespace WpfPizzaria.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.3.0")]
-    public sealed partial class CriandoTabelaFuncionarios : IMigrationMetadata
+    public sealed partial class AddTabelaBebidas : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CriandoTabelaFuncionarios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTabelaBebidas));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909262033348_CriandoTabelaFuncionarios"; }
+            get { return "201909261756199_AddTabelaBebidas"; }
         }
         
         string IMigrationMetadata.Source

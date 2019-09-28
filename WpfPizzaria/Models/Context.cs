@@ -14,6 +14,9 @@ namespace WpfPizzaria.Models
 
         //propriedades especificando quais entidades se tornará tabelas
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Bebida> Bebidas { get; set; }
+        public DbSet<Sabor> Sabores { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Tamanho> Tamanhos { get; set; }
     }
 }

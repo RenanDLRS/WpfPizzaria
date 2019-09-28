@@ -41,8 +41,9 @@ namespace WpfPizzaria.Views
 
             if (opc1.IsChecked == true)
             {
-                funcionario.cargoFuncionario = CargoFuncionario.Gerente; 
-            }else if (opc2.IsChecked == true)
+                funcionario.cargoFuncionario = CargoFuncionario.Gerente;
+            }
+            else if (opc2.IsChecked == true)
             {
                 funcionario.cargoFuncionario = CargoFuncionario.Cozinheiro;
             }

@@ -69,16 +69,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\FuncionarioDAO.cs" />
+    <Compile Include="DAL\TamanhoDAO.cs" />
+    <Compile Include="DAL\SaborDAO.cs" />
+    <Compile Include="DAL\BebidaDAO.cs" />
+    <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Migrations\201909232031113_CriandoBanco.cs" />
     <Compile Include="Migrations\201909232031113_CriandoBanco.designer.cs">
       <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909262033348_CriandoTabelaFuncionarios.cs" />
-    <Compile Include="Migrations\201909262033348_CriandoTabelaFuncionarios.designer.cs">
-      <DependentUpon>201909262033348_CriandoTabelaFuncionarios.cs</DependentUpon>
+    <Compile Include="Migrations\201909261756199_AddTabelaBebidas.cs" />
+    <Compile Include="Migrations\201909261756199_AddTabelaBebidas.designer.cs">
+      <DependentUpon>201909261756199_AddTabelaBebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909262027384_AddTabelaSabores.cs" />
+    <Compile Include="Migrations\201909262027384_AddTabelaSabores.designer.cs">
+      <DependentUpon>201909262027384_AddTabelaSabores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909262251205_TabelaFuncionario.cs" />
+    <Compile Include="Migrations\201909262251205_TabelaFuncionario.designer.cs">
+      <DependentUpon>201909262251205_TabelaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909262334092_TabelaTamanhos.cs" />
+    <Compile Include="Migrations\201909262334092_TabelaTamanhos.designer.cs">
+      <DependentUpon>201909262334092_TabelaTamanhos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909272153599_CriandoCampoTabelaTamanho.cs" />
+    <Compile Include="Migrations\201909272153599_CriandoCampoTabelaTamanho.designer.cs">
+      <DependentUpon>201909272153599_CriandoCampoTabelaTamanho.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bebida.cs" />
@@ -90,19 +109,41 @@
     <Compile Include="Models\ItemSabor.cs" />
     <Compile Include="Models\ItemVenda.cs" />
     <Compile Include="Models\Pizza.cs" />
+    <Compile Include="Models\Tamanho.cs" />
     <Compile Include="Models\Sabor.cs" />
     <Compile Include="Models\Venda.cs" />
+    <Compile Include="Views\FrmCadastrarFuncionario.xaml.cs">
+      <DependentUpon>FrmCadastrarFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCadastrarTamanho.xaml.cs">
+      <DependentUpon>FrmCadastrarTamanho.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCadastrarSabor.xaml.cs">
+      <DependentUpon>FrmCadastrarSabor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCadastrarBebida.xaml.cs">
+      <DependentUpon>FrmCadastrarBebida.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmCadastrarCliente.xaml.cs">
       <DependentUpon>FrmCadastrarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\FrmCadastrarFuncionario.xaml.cs">
-      <DependentUpon>FrmCadastrarFuncionario.xaml</DependentUpon>
+    <Compile Include="Views\FrmListarTamanho.xaml.cs">
+      <DependentUpon>FrmListarTamanho.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmListarSabor.xaml.cs">
+      <DependentUpon>FrmListarSabor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmListarBebida.xaml.cs">
+      <DependentUpon>FrmListarBebida.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmListarCliente.xaml.cs">
       <DependentUpon>FrmListarCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmPrincipal.xaml.cs">
       <DependentUpon>FrmPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmPedido.xaml.cs">
+      <DependentUpon>FrmPedido.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -122,8 +163,20 @@
     <EmbeddedResource Include="Migrations\201909232031113_CriandoBanco.resx">
       <DependentUpon>201909232031113_CriandoBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909262033348_CriandoTabelaFuncionarios.resx">
-      <DependentUpon>201909262033348_CriandoTabelaFuncionarios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909261756199_AddTabelaBebidas.resx">
+      <DependentUpon>201909261756199_AddTabelaBebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262027384_AddTabelaSabores.resx">
+      <DependentUpon>201909262027384_AddTabelaSabores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262251205_TabelaFuncionario.resx">
+      <DependentUpon>201909262251205_TabelaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262334092_TabelaTamanhos.resx">
+      <DependentUpon>201909262334092_TabelaTamanhos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909272153599_CriandoCampoTabelaTamanho.resx">
+      <DependentUpon>201909272153599_CriandoCampoTabelaTamanho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,19 +192,47 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\FrmCadastrarFuncionario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FrmCadastrarTamanho.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FrmCadastrarSabor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FrmCadastrarBebida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\FrmCadastrarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\FrmCadastrarFuncionario.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\FrmListarTamanho.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FrmListarSabor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FrmListarBebida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\FrmListarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FrmPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FrmPedido.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

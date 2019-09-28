@@ -20,7 +20,7 @@
 
         <Label Content="CPF" HorizontalAlignment="Left" Margin="205,150,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="269,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        
+
         <Label Content="Data" HorizontalAlignment="Left" Margin="205,271,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtData" HorizontalAlignment="Left" Height="23" Margin="269,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
 
