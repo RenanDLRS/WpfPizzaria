@@ -5,34 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPizzaria.Views"
         mc:Ignorable="d"
-        Title="Pedido" Height="1421.3" Width="800" Loaded="Window_Loaded">
+        Title="Pedido" Height="539.3" Width="800" Loaded="Window_Loaded">
     <Grid>
 
-        <StackPanel HorizontalAlignment="Left" Height="159" Margin="10,10,0,0" VerticalAlignment="Top" Width="382" Background="Gainsboro"/>
-        <StackPanel HorizontalAlignment="Left" Height="159" Margin="400,10,0,0" VerticalAlignment="Top" Width="382" Background="Gainsboro"/>
+        <StackPanel HorizontalAlignment="Left" Height="126" Margin="10,10,0,0" VerticalAlignment="Top" Width="382" Background="Gainsboro"/>
+        <StackPanel HorizontalAlignment="Left" Height="126" Margin="400,10,0,0" VerticalAlignment="Top" Width="382" Background="Gainsboro"/>
 
-        <Label Content="Selecione Tamanho" HorizontalAlignment="Left" Margin="23,23,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbTamanho" HorizontalAlignment="Left" Margin="156,23,0,0" VerticalAlignment="Top" Width="218"/>
+        <Label Content="Selecione Tamanho" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbTamanho" HorizontalAlignment="Left" Margin="156,19,0,0" VerticalAlignment="Top" Width="218"/>
 
-        <Label Content="Selecione Sabor" HorizontalAlignment="Left" Margin="23,58,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbSabor"  HorizontalAlignment="Left" Margin="156,62,0,0" VerticalAlignment="Top" Width="218"/>
+        <Label Content="Selecione Sabor" HorizontalAlignment="Left" Margin="23,45,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbSabor"  HorizontalAlignment="Left" Margin="156,46,0,0" VerticalAlignment="Top" Width="218"/>
 
-        <Button x:Name="btnAddSabor" Content="Adicionar" HorizontalAlignment="Left" Margin="23,99,0,0" VerticalAlignment="Top" Width="351" Click="btnAddSabor_Click" Height="50"/>
+        <Button x:Name="btnAddSabor" Content="Adicionar" HorizontalAlignment="Left" Margin="20,76,0,0" VerticalAlignment="Top" Width="351" Click="btnAddSabor_Click" Height="50"/>
 
         <Label Content="Selecione a Bebida" HorizontalAlignment="Left" Margin="409,23,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbBebida" HorizontalAlignment="Left" Margin="541,23,0,0" VerticalAlignment="Top" Width="222"/>
 
-        <Button x:Name="btnAdcionarBebida" Content="Adcionar" HorizontalAlignment="Left" Margin="417,99,0,0" VerticalAlignment="Top" Width="346" Click="BtnAdcionarBebida_Click" Height="50"/>
+        <Button x:Name="btnAdcionarBebida" Content="Adcionar" HorizontalAlignment="Left" Margin="417,76,0,0" VerticalAlignment="Top" Width="346" Click="BtnAdcionarBebida_Click" Height="50"/>
 
-        <DataGrid x:Name="dtaPizza" HorizontalAlignment="Left" Height="104" Margin="23,179,0,0" VerticalAlignment="Top" Width="375"/>
-        <DataGrid x:Name="dtaBebida" HorizontalAlignment="Left" Height="104" Margin="403,179,0,0" VerticalAlignment="Top" Width="365"/>
+        <DataGrid x:Name="dtaSabor" HorizontalAlignment="Left" Height="71" Margin="20,141,0,0" VerticalAlignment="Top" Width="372"/>
+        <DataGrid x:Name="dtaBebida" HorizontalAlignment="Left" Height="71" Margin="400,141,0,0" VerticalAlignment="Top" Width="382"/>
 
-        <Button x:Name="AddItems" Content="Adicionar items ao pedido" HorizontalAlignment="Left" Margin="23,399,0,0" VerticalAlignment="Top" Width="745" Height="57" Click="BtnAdicionarPizzaPedido_Click"/>
+        <Button x:Name="AddItensPedido" Content="Adicionar items ao pedido" HorizontalAlignment="Left" Margin="20,217,0,0" VerticalAlignment="Top" Width="762" Height="57" Click="AddItensPedido_Click"/>
 
-        <DataGrid x:Name="dtaPedido" HorizontalAlignment="Left" Height="146" Margin="20,506,0,0" VerticalAlignment="Top" Width="745"/>
-        <Label Content="Itens do Pedido" HorizontalAlignment="Left" Margin="319,475,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Pedido Finalizado" HorizontalAlignment="Left" Margin="366,594,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,0.5"/>
-        <DataGrid HorizontalAlignment="Left" Height="100" Margin="23,680,0,0" VerticalAlignment="Top" Width="732"/>
+        <DataGrid x:Name="dtaPedido" HorizontalAlignment="Left" Height="83" Margin="20,279,0,0" VerticalAlignment="Top" Width="762"/>
+        <DataGrid HorizontalAlignment="Left" Height="78" Margin="20,401,0,0" VerticalAlignment="Top" Width="762"/>
+        <Label Content="CPF VENDEDOR" HorizontalAlignment="Left" Margin="20,367,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label Content="CPF CLIENTE" HorizontalAlignment="Left" Margin="400,370,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,370,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="541,370,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200"/>
 
 
 

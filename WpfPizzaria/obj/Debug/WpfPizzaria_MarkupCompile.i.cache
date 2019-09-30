@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\jonat\Desktop\WpfPizzaria\WpfPizzaria\obj\Debug\
+C:\Users\Jony\Desktop\WpfPizzaria\WpfPizzaria\obj\Debug\
 WpfPizzaria
 none
 false
 DEBUG;TRACE
-C:\Users\jonat\Desktop\WpfPizzaria\WpfPizzaria\App.xaml
+C:\Users\Jony\Desktop\WpfPizzaria\WpfPizzaria\App.xaml
 112084697492
 
-47639572168
-161794918059
+49-1287477558
+16-2040680198
 Views\FrmCadastrarFuncionario.xaml;Views\FrmCadastrarTamanho.xaml;Views\FrmCadastrarSabor.xaml;Views\FrmCadastrarBebida.xaml;Views\FrmCadastrarCliente.xaml;Views\FrmListarTamanho.xaml;Views\FrmListarSabor.xaml;Views\FrmListarBebida.xaml;Views\FrmListarCliente.xaml;Views\FrmPrincipal.xaml;Views\FrmPedido.xaml;
 
 False

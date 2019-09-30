@@ -99,6 +99,10 @@
     <Compile Include="Migrations\201909272153599_CriandoCampoTabelaTamanho.designer.cs">
       <DependentUpon>201909272153599_CriandoCampoTabelaTamanho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909300146368_alterandoTabelaBebidas.cs" />
+    <Compile Include="Migrations\201909300146368_alterandoTabelaBebidas.designer.cs">
+      <DependentUpon>201909300146368_alterandoTabelaBebidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bebida.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -177,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909272153599_CriandoCampoTabelaTamanho.resx">
       <DependentUpon>201909272153599_CriandoCampoTabelaTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909300146368_alterandoTabelaBebidas.resx">
+      <DependentUpon>201909300146368_alterandoTabelaBebidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,6 +32,7 @@ namespace WpfPizzaria.Views
             Bebida bebida = new Bebida
             {
                 Nome = txtNome.Text,
+                Preco = Convert.ToDouble(txtPreco.Text),
                 CriadoEm = DateTime.Now
             };
 

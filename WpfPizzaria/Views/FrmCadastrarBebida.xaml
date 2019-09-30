@@ -18,11 +18,13 @@
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="205,126,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="269,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
 
-        <Label Content="Data" HorizontalAlignment="Left" Margin="205,172,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtData" HorizontalAlignment="Left" Height="23" Margin="269,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <Label Content="Data" HorizontalAlignment="Left" Margin="205,207,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtData" HorizontalAlignment="Left" Height="23" Margin="269,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
         <Button x:Name="btnCadastrar" Content="CADASTRAR" HorizontalAlignment="Left" Margin="269,261,0,0" VerticalAlignment="Top" Width="200" Height="86" Click="BtnCadastrar_Click"/>
 
         <Image HorizontalAlignment="Left" Height="288" Margin="508,112,0,0" VerticalAlignment="Top" Width="228" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\chef.png"/>
+        <Label Content="Preço" HorizontalAlignment="Left" Margin="205,165,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPreco" HorizontalAlignment="Left" Height="23" Margin="269,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
 
         <!--Footer-->
 

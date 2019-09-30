@@ -12,6 +12,7 @@ namespace WpfPizzaria.Models {
         [Key]
         public int BebidaId { get; set; }
         public string Nome { get; set; }
+        public Double Preco { get; set; }
         public DateTime CriadoEm { get; set; }
 
         public Bebida() {

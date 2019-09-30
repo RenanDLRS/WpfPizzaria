@@ -21,14 +21,18 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmPedido : Window
     {
-        //Lista objeto dinamico para sobores da pizza
-        private List<Sabor> sabores = new List<Sabor>();
-        private List<Pizza> pizza = new List<Pizza>();
+        private List<Bebida> listaBebidas = new List<Bebida>();
+        Bebida bebida = new Bebida();
 
-        //Lista objeto dinamico para bebidas
-        private List<dynamic> bebidas = new List<dynamic>();
+        private List<ItemSabor> listaItemSabor = new List<ItemSabor>();
+        ItemSabor itemSabor = new ItemSabor();
 
-        private List<dynamic> itemVenda = new List<dynamic>();        
+        private List<Pizza> listaPizza = new List<Pizza>();
+        Pizza pizza = new Pizza();
+
+        private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
+        ItemVenda itemVenda = new ItemVenda();
+
 
         public FrmPedido()
         {
@@ -53,8 +57,18 @@ namespace WpfPizzaria.Views
             cbBebida.DisplayMemberPath = "Nome";
             cbBebida.SelectedValuePath = "BebidaId";
         }
+        private void BtnAdcionarBebida_Click(object sender, RoutedEventArgs e)
+        {
 
-        //Botão para adicionar sabores
+            int idBebida = Convert.ToInt32(cbBebida.SelectedValue);
+            bebida = BebidaDAO.BuscarBebidaPorId(idBebida);
+
+            listaBebidas.Add(bebida);
+            dtaBebida.ItemsSource = listaBebidas;
+            dtaBebida.Items.Refresh();
+
+        }
+
         private void btnAddSabor_Click(object sender, RoutedEventArgs e)
         {
             int idTamanho = Convert.ToInt32(cbTamanho.SelectedValue);
@@ -62,29 +76,32 @@ namespace WpfPizzaria.Views
 
             int idSabor = Convert.ToInt32(cbSabor.SelectedValue);
             Sabor s = SaborDAO.BuscarSaborPorId(idSabor);
-                       
-            sabores.Add(s);
-            dtaPizza.ItemsSource = sabores;
-            dtaPizza.Items.Refresh();
-           
-        }
 
-        //Botão para adicionar bebidas
-        private void BtnAdcionarBebida_Click(object sender, RoutedEventArgs e)
-        {
+            if (pizza.Tamanho == null)
+            {
+                pizza.Tamanho = t;
+            }
 
-            int idBebida = Convert.ToInt32(cbBebida.SelectedValue);
-            Bebida b = BebidaDAO.BuscarBebidaPorId(idBebida);
+            itemSabor.Sabor = s;
+            listaItemSabor.Add(itemSabor);
 
-            bebidas.Add(b);
-            dtaBebida.ItemsSource = bebidas;
-            dtaBebida.Items.Refresh();
+            dtaSabor.ItemsSource = listaItemSabor;
+            dtaSabor.Items.Refresh();
 
         }
 
-        private void BtnAdicionarPizzaPedido_Click(object sender, RoutedEventArgs e)
+        private void AddItensPedido_Click(object sender, RoutedEventArgs e)
         {
+            pizza.Sabor = listaItemSabor;
+            listaPizza.Add(pizza);
 
+            itemVenda.Pizza = pizza;
+            itemVenda.Bebida = bebida;
+            itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco;
+            listaItemVenda.Add(itemVenda);
+
+            dtaPedido.ItemsSource = listaItemVenda;
+            dtaPedido.Items.Refresh();
         }
     }
 }
