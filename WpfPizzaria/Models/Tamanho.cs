@@ -16,8 +16,5 @@ namespace WpfPizzaria.Models {
         public double Preco { get; set; }
         public int QtdSabores { get; set; }
 
-        public override string ToString() {
-            return $"Nome do Tamanho: {Nome}, Preço: {Preco}";
-        }
     }
 }

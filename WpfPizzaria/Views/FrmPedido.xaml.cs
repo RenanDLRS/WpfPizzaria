@@ -21,14 +21,17 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmPedido : Window
     {
-        private List<Bebida> listaBebidas = new List<Bebida>();
-        Bebida bebida = new Bebida();
-
-        private List<ItemSabor> listaItemSabor = new List<ItemSabor>();
-        ItemSabor itemSabor = new ItemSabor();
 
         private List<Pizza> listaPizza = new List<Pizza>();
         Pizza pizza = new Pizza();
+
+
+
+        private List<Bebida> listaBebidas = new List<Bebida>();
+        Bebida bebida = new Bebida();
+
+        private List<Sabor> listaSabor = new List<Sabor>();
+        Sabor sabor = new Sabor();
 
         private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
         ItemVenda itemVenda = new ItemVenda();
@@ -75,31 +78,44 @@ namespace WpfPizzaria.Views
             Tamanho t = TamanhoDAO.BuscarTamanhoPorId(idTamanho);
 
             int idSabor = Convert.ToInt32(cbSabor.SelectedValue);
-            Sabor s = SaborDAO.BuscarSaborPorId(idSabor);
+            sabor = SaborDAO.BuscarSaborPorId(idSabor);
 
+            //Não substiuir tamanho primario da pizza
             if (pizza.Tamanho == null)
             {
                 pizza.Tamanho = t;
             }
+            listaSabor.Add(sabor);
 
-            itemSabor.Sabor = s;
-            listaItemSabor.Add(itemSabor);
-
-            dtaSabor.ItemsSource = listaItemSabor;
+            dtaSabor.ItemsSource = listaSabor;
             dtaSabor.Items.Refresh();
 
         }
 
         private void AddItensPedido_Click(object sender, RoutedEventArgs e)
         {
-            pizza.Sabor = listaItemSabor;
+
+            //Zerando as lista de sabores e bebidas para reutilizar
+            listaBebidas.Clear();
+            listaSabor.Clear();
+            dtaBebida.ItemsSource = listaBebidas;
+            dtaBebida.Items.Refresh();
+            dtaSabor.ItemsSource = listaSabor;
+            dtaSabor.Items.Refresh();
+
+
+
+            //Criando uma pizza e adicionando a l ista de pizzas
+            pizza.Sabores = listaSabor;
             listaPizza.Add(pizza);
 
+            //Criando um itemVenda com os dados pizza bebidas e preço
             itemVenda.Pizza = pizza;
             itemVenda.Bebida = bebida;
             itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco;
             listaItemVenda.Add(itemVenda);
 
+            //Listando a lista itemVendas
             dtaPedido.ItemsSource = listaItemVenda;
             dtaPedido.Items.Refresh();
         }

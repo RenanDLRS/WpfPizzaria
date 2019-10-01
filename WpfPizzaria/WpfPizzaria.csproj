@@ -110,7 +110,6 @@
     <Compile Include="Models\Enums\CargoFuncionario.cs" />
     <Compile Include="Models\Enums\StatusPedido.cs" />
     <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\ItemSabor.cs" />
     <Compile Include="Models\ItemVenda.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\Tamanho.cs" />

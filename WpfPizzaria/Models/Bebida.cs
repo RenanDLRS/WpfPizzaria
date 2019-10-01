@@ -20,7 +20,7 @@ namespace WpfPizzaria.Models {
         }
 
         public override string ToString() {
-            return $"Nome da bebida: {Nome}";
+            return $"Bebida {Nome} Preço {Preco}";
         }
     }
 }
