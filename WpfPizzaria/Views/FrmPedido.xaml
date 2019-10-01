@@ -29,7 +29,7 @@
 
         <Button x:Name="AddItensPedido" Content="Adicionar items ao pedido" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="772" Height="57" Click="AddItensPedido_Click"/>
 
-        <DataGrid x:Name="dtaPedido" HorizontalAlignment="Left" Height="83" Margin="10,279,0,0" VerticalAlignment="Top" Width="772"/>
+        <DataGrid x:Name="dtaItensVenda" HorizontalAlignment="Left" Height="83" Margin="10,279,0,0" VerticalAlignment="Top" Width="772"/>
         <DataGrid HorizontalAlignment="Left" Height="78" Margin="10,425,0,0" VerticalAlignment="Top" Width="775"/>
         <Label Content="CPF VENDEDOR" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="127"/>
         <Label Content="CPF CLIENTE" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top"/>

@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace WpfPizzaria.Models {
     class ItemVenda {
-        public Pizza Pizza { get; set; }
-        public Bebida Bebida { get; set; }
+        public int Id { get; set; }
+        public List<Pizza> Pizzas { get; set; }
+        public List<Bebida> Bebidas { get; set; }
         public double Preco { get; set; }
         public DateTime CriadoEm { get; set; }
 
         public ItemVenda() {
-            Pizza = new Pizza();
-            Bebida = new Bebida();
+            Pizzas = new List<Pizza>();
+            Bebidas = new List<Bebida>();
             CriadoEm = DateTime.Now;
         }
     }

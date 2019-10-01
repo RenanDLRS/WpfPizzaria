@@ -94,30 +94,37 @@ namespace WpfPizzaria.Views
 
         private void AddItensPedido_Click(object sender, RoutedEventArgs e)
         {
-
-            //Zerando as lista de sabores e bebidas para reutilizar
-            listaBebidas.Clear();
-            listaSabor.Clear();
-            dtaBebida.ItemsSource = listaBebidas;
-            dtaBebida.Items.Refresh();
-            dtaSabor.ItemsSource = listaSabor;
-            dtaSabor.Items.Refresh();
-
-
-
             //Criando uma pizza e adicionando a l ista de pizzas
             pizza.Sabores = listaSabor;
             listaPizza.Add(pizza);
 
             //Criando um itemVenda com os dados pizza bebidas e preço
-            itemVenda.Pizza = pizza;
-            itemVenda.Bebida = bebida;
-            itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco;
+            itemVenda.Pizzas = listaPizza;
+            itemVenda.Bebidas = listaBebidas;
+            itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco ;
             listaItemVenda.Add(itemVenda);
+            //###################################################
+            //#CHAMAR AQUI O DAO ITENSVENDA PARA SALVAR O BOJETO#
+            //###################################################
 
             //Listando a lista itemVendas
-            dtaPedido.ItemsSource = listaItemVenda;
-            dtaPedido.Items.Refresh();
+            dtaItensVenda.ItemsSource = listaItemVenda;
+            dtaItensVenda.Items.Refresh();
+
+            //Função para limpar
+            //LimparListasEDataGrid();
+        }
+
+        public void LimparListasEDataGrid()
+        {
+            //Zerando as lista de sabores e bebidas para reutilizar
+            listaBebidas.Clear();
+            listaSabor.Clear();
+            //Zerando as dataGrid para novos pedidos
+            dtaBebida.ItemsSource = listaBebidas;
+            dtaBebida.Items.Refresh();
+            dtaSabor.ItemsSource = listaSabor;
+            dtaSabor.Items.Refresh();
         }
     }
 }
