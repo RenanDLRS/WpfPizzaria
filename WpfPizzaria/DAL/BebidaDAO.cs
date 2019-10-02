@@ -37,5 +37,10 @@ namespace WpfPizzaria.DAL
         {
             return ctx.Bebidas.Find(id);
         }
+        public static void DeletarBebida(Bebida b)
+        {
+            ctx.Bebidas.Remove(b);
+
+        }
     }
 }

@@ -7,14 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WpfPizzaria.Models {
+    [Table("Pizzas")]
     class Pizza {
-
+        [Key]
         public int Id { get; set; }
-        public List<Sabor> Sabores { get; set; } //Lista 1,2,3 ou 4 sabores
+        public List<ItemSabor> Sabores { get; set; }
         public Tamanho Tamanho { get; set; } 
         
         public Pizza() {
-            Sabores = new List<Sabor>();
+            Sabores = new List<ItemSabor>();
         }
         public override string ToString()
         {

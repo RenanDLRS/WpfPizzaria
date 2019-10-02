@@ -13,7 +13,8 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="312" Margin="0,107,0,0" VerticalAlignment="Top" Width="200" Background="#FF293545"/>
         <Label Content="Listar Bebidas" HorizontalAlignment="Left" Margin="324,39,0,0" VerticalAlignment="Top" Width="312" Height="68" FontFamily="Comic Sans MS" FontSize="36"/>
-        <DataGrid x:Name="dtaBebidas" HorizontalAlignment="Left" Height="228" Margin="244,142,0,0" VerticalAlignment="Top" Width="500"/>
+        <DataGrid x:Name="dtaBebidas" HorizontalAlignment="Left" Height="182" Margin="244,142,0,0" VerticalAlignment="Top" Width="500"/>
+        <Button x:Name="btnDeletar"  Content="Deletar" HorizontalAlignment="Left" Margin="307,366,0,0" VerticalAlignment="Top" Width="75" Click="BtnDeletar_Click" />
 
 
     </Grid>

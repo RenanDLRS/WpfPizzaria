@@ -18,5 +18,7 @@ namespace WpfPizzaria.Models
         public DbSet<Sabor> Sabores { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Tamanho> Tamanhos { get; set; }
+        public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<ItemSabor> ItemSabores{ get; set; }
     }
 }

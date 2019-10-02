@@ -21,21 +21,16 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmPedido : Window
     {
-
         private List<Pizza> listaPizza = new List<Pizza>();
-        Pizza pizza = new Pizza();
-
+        Pizza pizza;
+        private List<Sabor> listaSabor = new List<Sabor>();
+        Sabor sabor;
+        ItemVenda itemVenda = new ItemVenda();
+        private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
 
 
         private List<Bebida> listaBebidas = new List<Bebida>();
         Bebida bebida = new Bebida();
-
-        private List<Sabor> listaSabor = new List<Sabor>();
-        Sabor sabor = new Sabor();
-
-        private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
-        ItemVenda itemVenda = new ItemVenda();
-
 
         public FrmPedido()
         {
@@ -44,22 +39,20 @@ namespace WpfPizzaria.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            cbSabor.ItemsSource =
-            SaborDAO.ListarSabores();
+            cbSabor.ItemsSource = SaborDAO.ListarSabores();
             cbSabor.DisplayMemberPath = "Nome";
             cbSabor.SelectedValuePath = "SaborId";
 
-
-            cbTamanho.ItemsSource =
-            TamanhoDAO.ListarTamanhoes();
+            cbTamanho.ItemsSource = TamanhoDAO.ListarTamanhoes();
             cbTamanho.DisplayMemberPath = "Nome";
             cbTamanho.SelectedValuePath = "TamanhoId";
 
-            cbBebida.ItemsSource =
-            BebidaDAO.ListarBebidas();
+            cbBebida.ItemsSource = BebidaDAO.ListarBebidas();
             cbBebida.DisplayMemberPath = "Nome";
             cbBebida.SelectedValuePath = "BebidaId";
         }
+
+
         private void BtnAdcionarBebida_Click(object sender, RoutedEventArgs e)
         {
 
@@ -72,54 +65,51 @@ namespace WpfPizzaria.Views
 
         }
 
+
         private void btnAddSabor_Click(object sender, RoutedEventArgs e)
         {
+
+            pizza = new Pizza();
+            
             int idTamanho = Convert.ToInt32(cbTamanho.SelectedValue);
             Tamanho t = TamanhoDAO.BuscarTamanhoPorId(idTamanho);
-
-            int idSabor = Convert.ToInt32(cbSabor.SelectedValue);
-            sabor = SaborDAO.BuscarSaborPorId(idSabor);
-
-            //Não substiuir tamanho primario da pizza
             if (pizza.Tamanho == null)
             {
                 pizza.Tamanho = t;
             }
-            listaSabor.Add(sabor);
+            listaPizza.Add(pizza);
 
+            sabor = new Sabor();
+
+            int idSabor = Convert.ToInt32(cbSabor.SelectedValue);
+            sabor = SaborDAO.BuscarSaborPorId(idSabor);
+
+            listaSabor.Add(sabor);
             dtaSabor.ItemsSource = listaSabor;
             dtaSabor.Items.Refresh();
-
         }
 
         private void AddItensPedido_Click(object sender, RoutedEventArgs e)
         {
-            //Criando uma pizza e adicionando a l ista de pizzas
-            pizza.Sabores = listaSabor;
-            listaPizza.Add(pizza);
+            itemVenda = new ItemVenda();
 
-            //Criando um itemVenda com os dados pizza bebidas e preço
             itemVenda.Pizzas = listaPizza;
             itemVenda.Bebidas = listaBebidas;
             itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco ;
             listaItemVenda.Add(itemVenda);
-            //###################################################
-            //#CHAMAR AQUI O DAO ITENSVENDA PARA SALVAR O BOJETO#
-            //###################################################
 
-            //Listando a lista itemVendas
             dtaItensVenda.ItemsSource = listaItemVenda;
-            dtaItensVenda.Items.Refresh();
-
-            //Função para limpar
-            //LimparListasEDataGrid();
+            dtaItensVenda.Items.Refresh();            
         }
 
         public void LimparListasEDataGrid()
         {
+            //Zerando tamanhho pizza
+            pizza.Tamanho = null;
             //Zerando as lista de sabores e bebidas para reutilizar
             listaBebidas.Clear();
             listaSabor.Clear();
+            listaPizza.Clear();
             //Zerando as dataGrid para novos pedidos
             dtaBebida.ItemsSource = listaBebidas;
             dtaBebida.Items.Refresh();
