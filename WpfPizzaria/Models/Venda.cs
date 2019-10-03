@@ -10,8 +10,8 @@ namespace WpfPizzaria.Models {
         public int VendaId { get; set; }
         public Cliente Cliente { get; set; }
         public Funcionario Funcionario { get; set; }
+        public Double Preco { get; set; }
         public List<ItemVenda> ProdutosVenda { get; set; }
-        public StatusPedido statusPedido { get; set; }
         public DateTime CriadoEm { get; set; }
 
         public Venda() {
