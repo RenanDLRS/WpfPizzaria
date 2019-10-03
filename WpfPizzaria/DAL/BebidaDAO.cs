@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,32 @@ namespace WpfPizzaria.DAL
             }
             return false;           
         }
+        
+        public static bool DeletarBebida(Bebida Bebida)
+        {
+            Bebida b = BuscarBebidaPorId(Bebida.BebidaId);
+            if (b != null)
+            {
+                ctx.Bebidas.Remove(b);
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool AlterarBebida(Bebida Bebida)
+        {
+            Bebida b = BuscarBebidaPorId(Bebida.BebidaId);
+            if (b != null)
+            {
+                ctx.Entry(b).State = EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
 
         public static Bebida BuscarBebidaPorNome(Bebida bebida)
         {
@@ -37,10 +64,11 @@ namespace WpfPizzaria.DAL
         {
             return ctx.Bebidas.Find(id);
         }
-        public static void DeletarBebida(Bebida b)
+
+        /*public static void DeletarBebida(Bebida b)
         {
             ctx.Bebidas.Remove(b);
 
-        }
+        }*/
     }
 }

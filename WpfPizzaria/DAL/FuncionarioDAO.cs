@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,37 @@ namespace WpfPizzaria.DAL
                 return true;
             }
             return false;
+        }
+
+        public static bool DeletarFuncionario(Funcionario Funcionario)
+        {
+            Funcionario f = BuscarFuncionarioPorId(Funcionario.FuncionarioId);
+            if (f != null)
+            {
+                ctx.Funcionarios.Remove(f);
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool AlterarFuncionario(Funcionario Funcionario)
+        {
+            Funcionario f = BuscarFuncionarioPorId(Funcionario.FuncionarioId);
+            if (f != null)
+            {
+                ctx.Entry(f).State = EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static Funcionario BuscarFuncionarioPorId(int id)
+        {
+            return ctx.Funcionarios.Find(id);
         }
 
         public static Funcionario BuscarFuncionarioPorCpf(Funcionario funcionario)

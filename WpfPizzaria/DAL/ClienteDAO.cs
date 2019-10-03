@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,37 @@ namespace WpfPizzaria.DAL
                 return true;
             }
             return false;           
+        }
+
+        public static bool DeletarCliente(Cliente Cliente)
+        {
+            Cliente c = BuscarClientePorId(Cliente.ClienteId);
+            if (c != null)
+            {
+                ctx.Clientes.Remove(c);
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool AlterarCliente(Cliente Cliente)
+        {
+            Cliente c = BuscarClientePorId(Cliente.ClienteId);
+            if (c != null)
+            {
+                ctx.Entry(c).State = EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static Cliente BuscarClientePorId(int id)
+        {
+            return ctx.Clientes.Find(id);
         }
 
         public static Cliente BuncasClientePorCpf(Cliente cliente)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,32 @@ namespace WpfPizzaria.DAL
                 return true;
             }
             return false;           
+        }
+
+        public static bool DeletarSabor(Sabor Sabor)
+        {
+            Sabor s = BuscarSaborPorId(Sabor.SaborId);
+            if (s != null)
+            {
+                ctx.Sabores.Remove(s);
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool AlterarSabor(Sabor Sabor)
+        {
+            Sabor s = BuscarSaborPorId(Sabor.SaborId);
+            if (s != null)
+            {
+                ctx.Entry(s).State = EntityState.Modified;
+                ctx.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         public static Sabor BuscarSaborPorNome(Sabor sabor)
