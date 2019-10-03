@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace WpfPizzaria.Models {
 
     [Table("Tamanhos")]
-    class Tamanho {
+    public class Tamanho {
         [Key]
         public int TamanhoId { get; set; }
         public string Nome { get; set; }

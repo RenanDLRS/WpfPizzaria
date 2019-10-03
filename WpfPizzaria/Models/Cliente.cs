@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace WpfPizzaria.Models {
 
     [Table("Clientes")]
-    class Cliente {
+    public class Cliente {
 
         //Propriedades
         [Key]

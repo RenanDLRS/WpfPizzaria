@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfPizzaria.Models {
     [Table("Bebidas")]
-    class Bebida {
+    public class Bebida {
         [Key]
         public int BebidaId { get; set; }
         public string Nome { get; set; }

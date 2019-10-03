@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace WpfPizzaria.Models {
 
     [Table("Sabores")]
-    class Sabor {
+    public class Sabor {
         [Key]
         public int SaborId { get; set; }
         public string Nome { get; set; }
