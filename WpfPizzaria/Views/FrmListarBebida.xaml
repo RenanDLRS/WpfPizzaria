@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPizzaria.Views"
         mc:Ignorable="d"
-        Title="FrmListarBebida" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
+        Title="FrmListarBebida" Height="491.422" Width="788.702" Loaded="Window_Loaded">
+    <Grid Margin="0,0,2,-21">
         <!--HEADER-->
         <StackPanel HorizontalAlignment="Left" Height="107" VerticalAlignment="Top" Width="200" Background="#FFE57E31">
             <Image HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="200" Source="C:\Users\jonat\Desktop\ProjetoPizzaria\Projeto01\Versao1.0.0\WpfPizzaria\Img\logo.png"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="312" Margin="0,107,0,0" VerticalAlignment="Top" Width="200" Background="#FF293545"/>
+        <StackPanel HorizontalAlignment="Left" Height="364" Margin="0,107,0,0" VerticalAlignment="Top" Width="200" Background="#FF293545"/>
         <Label Content="Listar Bebidas" HorizontalAlignment="Left" Margin="324,39,0,0" VerticalAlignment="Top" Width="312" Height="68" FontFamily="Comic Sans MS" FontSize="36"/>
-        <DataGrid x:Name="dtaBebidas" HorizontalAlignment="Left" Height="182" Margin="244,142,0,0" VerticalAlignment="Top" Width="500"/>
-        <Button x:Name="btnDeletar"  Content="Deletar" HorizontalAlignment="Left" Margin="307,366,0,0" VerticalAlignment="Top" Width="75" Click="BtnDeletar_Click" />
+        <DataGrid x:Name="dtaBebidas" HorizontalAlignment="Left" Height="201" Margin="244,142,0,0" VerticalAlignment="Top" Width="500"/>
+        <Button x:Name="btnDeletar" Content="Deletar" HorizontalAlignment="Left" Margin="637,384,0,0" VerticalAlignment="Top" Width="107" Height="38" Click="BtnDeletar_Click"/>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="502,384,0,0" VerticalAlignment="Top" Width="107" Height="38" Click="BtnAlterar_Click"/>
+        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="244,384,0,0" VerticalAlignment="Top" Width="107" RenderTransformOrigin="1.5,-1.075" Height="38" Click="BtnVoltar_Click"/>
 
 
     </Grid>

@@ -54,11 +54,11 @@ namespace WpfPizzaria.Views
 
             if (FuncionarioDAO.CadastrarFuncionario(funcionario))
             {
-                MessageBox.Show("Funcionario cadastrado com sucesso");
+                MessageBox.Show("Funcionario cadastrado com sucesso", "Cadastrado", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("Funcionario já cadastrado!!!");
+                MessageBox.Show("Funcionario já cadastrado!!!", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
 

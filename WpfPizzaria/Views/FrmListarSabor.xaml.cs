@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfPizzaria.DAL;
+using WpfPizzaria.Models;
 
 namespace WpfPizzaria.Views
 {
@@ -28,7 +29,29 @@ namespace WpfPizzaria.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             dtaSabores.ItemsSource = SaborDAO.ListarSabores();
+        }
 
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarSabor frmCadastrarSabor = new FrmCadastrarSabor((Sabor)dtaSabores.SelectedValue);
+            frmCadastrarSabor.ShowDialog();
+
+            dtaSabores.Items.Refresh();
+        }
+
+        private void BtnDeletar_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Tem certeza que deseja excluir?", "Confirmar exclusão", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.Yes)
+            {
+                SaborDAO.DeletarSabor((Sabor)dtaSabores.SelectedValue);
+            }
+
+            dtaSabores.Items.Refresh();
         }
     }
 }
