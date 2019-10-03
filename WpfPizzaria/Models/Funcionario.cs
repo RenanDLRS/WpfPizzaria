@@ -9,7 +9,7 @@ using WpfPizzaria.Models.Enums;
 
 namespace WpfPizzaria.Models {
     [Table("Funcionarios")]
-    class Funcionario {
+    public class Funcionario {
 
         [Key]
         public int FuncionarioId { get; set; }
