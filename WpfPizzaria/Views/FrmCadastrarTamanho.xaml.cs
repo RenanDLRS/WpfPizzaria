@@ -21,27 +21,59 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmCadastrarTamanho : Window
     {
+        Tamanho t = null;
+
         public FrmCadastrarTamanho()
         {
             InitializeComponent();
         }
 
+
+        public FrmCadastrarTamanho(Tamanho tamanho)
+        {
+            InitializeComponent();
+            btnCadastrar.Content = "Alterar";
+
+            txtNome.Text = tamanho.Nome;
+            txtPreco.Text = tamanho.Preco.ToString();
+
+            t = tamanho;
+        }
+
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Tamanho Tamanho = new Tamanho
-            {
-                Nome = txtNome.Text,
-                Preco = Convert.ToDouble(txtPreco.Text)
-            };
 
-            if (TamanhoDAO.CadastrarTamanho(Tamanho))
+            if (t == null)
             {
-                MessageBox.Show("Tamanho cadastrado com sucesso");
+                t = new Tamanho();
+                t.Nome = txtNome.Text;
+                t.Preco = Convert.ToDouble(txtPreco.Text);
+
+                if (TamanhoDAO.CadastrarTamanho(t))
+                {
+                    MessageBox.Show("Tamanho cadastrado com sucesso", "Cadastrado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Tamanho já cadastrado!!!", "Já cadastrado", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+
+                t = null;
             }
-            else
+            else if (t != null)
             {
-                MessageBox.Show("Tamanho já cadastrado!!!");
-            }           
+                t.Nome = txtNome.Text;
+                t.Preco = Convert.ToDouble(txtPreco.Text);
+
+                if (TamanhoDAO.AlterarTamanho(t))
+                {
+                    MessageBox.Show("Tamanho alterado com sucesso", "Alterado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro na alteração!!", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

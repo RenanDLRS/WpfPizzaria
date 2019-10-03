@@ -36,10 +36,27 @@ namespace WpfPizzaria.Views
 
         }
 
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnAlterar_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCadastrarBebida frmCadastrarBebida = new FrmCadastrarBebida((Bebida)dtaBebidas.SelectedValue);
+            frmCadastrarBebida.ShowDialog();
+
+            dtaBebidas.Items.Refresh();
+        }
+
         private void BtnDeletar_Click(object sender, RoutedEventArgs e)
         {
-            Bebida bebida = (Bebida)dtaBebidas.SelectedValue;
-            BebidaDAO.DeletarBebida(bebida);
+            if (MessageBox.Show("Tem certeza que deseja excluir?", "Confirmar exclusão", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.Yes)
+            {
+                BebidaDAO.DeletarBebida((Bebida)dtaBebidas.SelectedValue);
+            }
+
+            dtaBebidas.Items.Refresh();
         }
     }
 }

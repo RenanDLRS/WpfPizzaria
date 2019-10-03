@@ -21,31 +21,67 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmCadastrarCliente : Window
     {
+        Cliente c = null;
+
         public FrmCadastrarCliente()
         {
             InitializeComponent();
             txtData.Text = DateTime.Now.ToString();
         }
 
+        public FrmCadastrarCliente(Cliente cliente)
+        {
+            InitializeComponent();
+            btnCadastrar.Content = "Alterar";
+
+            txtData.Text = cliente.CriadoEm.ToString();
+            txtCpf.Text = cliente.Cpf.ToString();
+            txtEndereco.Text = cliente.Endereco;
+            txtNome.Text = cliente.Nome;
+            txtTelefone.Text = cliente.Telefone;
+
+            c = cliente;
+        }
+
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = new Cliente
-            {
-                Nome = txtNome.Text,
-                Cpf = txtCpf.Text,
-                Telefone = txtTelefone.Text,
-                Endereco = txtEndereco.Text,
-                CriadoEm = DateTime.Now
-            };
 
-            if (ClienteDAO.CadastrarCliente(cliente))
+            if (c == null)
             {
-                MessageBox.Show("Cliente cadastrado com sucesso");
+                c = new Cliente();
+                c.Nome = txtNome.Text;
+                c.Cpf = txtCpf.Text;
+                c.Telefone = txtTelefone.Text;
+                c.Endereco = txtEndereco.Text;
+                c.CriadoEm = DateTime.Now;
+
+                if (ClienteDAO.CadastrarCliente(c))
+                {
+                    MessageBox.Show("Cliente cadastrado com sucesso", "Cadastrado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Cliente já cadastrado!!!", "Já cadastrado", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+
+                c = null;
             }
-            else
+            else if (c != null)
             {
-                MessageBox.Show("Cliente já cadastrado!!!");
-            }           
+                c.Nome = txtNome.Text;
+                c.Cpf = txtCpf.Text;
+                c.Telefone = txtTelefone.Text;
+                c.Endereco = txtEndereco.Text;
+
+                if (ClienteDAO.AlterarCliente(c))
+                {
+                    MessageBox.Show("Cliente alterado com sucesso", "Alterado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro na alteração!!", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

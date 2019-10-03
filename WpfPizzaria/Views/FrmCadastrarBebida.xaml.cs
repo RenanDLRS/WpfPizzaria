@@ -21,29 +21,60 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmCadastrarBebida : Window
     {
+        Bebida b = null;
+
         public FrmCadastrarBebida()
         {
             InitializeComponent();
             txtData.Text = DateTime.Now.ToString();
         }
 
+        public FrmCadastrarBebida(Bebida bebida)
+        {
+            InitializeComponent();
+            btnCadastrar.Content = "Alterar";
+
+            txtNome.Text = bebida.Nome;
+            txtPreco.Text = bebida.Preco.ToString();
+            txtData.Text = bebida.CriadoEm.ToString();
+
+            b = bebida;
+        }
+
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Bebida bebida = new Bebida
+            if (b == null)
             {
-                Nome = txtNome.Text,
-                Preco = Convert.ToDouble(txtPreco.Text),
-                CriadoEm = DateTime.Now
-            };
+                b = new Bebida();
+                b.Nome = txtNome.Text;
+                b.Preco = Convert.ToDouble(txtPreco.Text);
+                b.CriadoEm = DateTime.Now;
 
-            if (BebidaDAO.CadastrarBebida(bebida))
-            {
-                MessageBox.Show("Bebida cadastrada com sucesso");
+                if (BebidaDAO.CadastrarBebida(b))
+                {
+                    MessageBox.Show("Bebida cadastrado com sucesso", "Cadastrado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Bebida já cadastrado!!!", "Já cadastrado", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+
+                b = null;
             }
-            else
+            else if (b != null)
             {
-                MessageBox.Show("Bebida já cadastrada!!!");
-            }           
+                b.Nome = txtNome.Text;
+                b.Preco = Convert.ToDouble(txtPreco.Text);
+
+                if (BebidaDAO.AlterarBebida(b))
+                {
+                    MessageBox.Show("Bebida alterado com sucesso", "Alterado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro na alteração!!", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }
