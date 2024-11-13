@@ -30,12 +30,12 @@
         <Button x:Name="AddItensPedido" Content="Adicionar items ao pedido" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="772" Height="57" Click="AddItensPedido_Click"/>
 
         <DataGrid x:Name="dtaItensVenda" HorizontalAlignment="Left" Height="83" Margin="10,279,0,0" VerticalAlignment="Top" Width="772"/>
-        <DataGrid HorizontalAlignment="Left" Height="78" Margin="10,425,0,0" VerticalAlignment="Top" Width="775"/>
+        <DataGrid x:Name="dtaVenda" HorizontalAlignment="Left" Height="78" Margin="10,425,0,0" VerticalAlignment="Top" Width="775"/>
         <Label Content="CPF VENDEDOR" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="127"/>
         <Label Content="CPF CLIENTE" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,370,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,397,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="400,373,0,0" VerticalAlignment="Top" Width="382" Height="46"/>
+        <TextBox x:Name="txtCpfVendedor" HorizontalAlignment="Left" Height="23" Margin="122,370,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
+        <TextBox x:Name="txtCpfCliente" HorizontalAlignment="Left" Height="23" Margin="122,397,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
+        <Button x:Name="btnFecharPedido" Content="Adicionar" HorizontalAlignment="Left" Margin="400,370,0,0" VerticalAlignment="Top" Width="382" Height="49" Click="btnFecharPedido_Click"/>
 
 
 

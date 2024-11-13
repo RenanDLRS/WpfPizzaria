@@ -21,16 +21,22 @@ namespace WpfPizzaria.Views
     /// </summary>
     public partial class FrmPedido : Window
     {
-        private List<Pizza> listaPizza = new List<Pizza>();
-        Pizza pizza;
-        private List<Sabor> listaSabor = new List<Sabor>();
-        Sabor sabor;
-        ItemVenda itemVenda = new ItemVenda();
-        private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
-
-
         private List<Bebida> listaBebidas = new List<Bebida>();
-        Bebida bebida = new Bebida();
+        private List<Pizza> listaPizza = new List<Pizza>();
+        private List<Sabor> listaSabor = new List<Sabor>();
+        private List<ItemVenda> listaItemVenda = new List<ItemVenda>();
+        private List<Venda> listaVenda = new List<Venda>();
+
+        private List<dynamic> ListaProdutos = new List<dynamic>();
+        private List<dynamic> listaViewVenda = new List<dynamic>();        
+
+        Pizza pizza;        
+        Sabor sabor;
+        ItemVenda itemVenda;        
+        Bebida bebida;        
+        Funcionario funcionario;
+        Cliente cliente;
+        Venda venda;        
 
         public FrmPedido()
         {
@@ -52,35 +58,27 @@ namespace WpfPizzaria.Views
             cbBebida.SelectedValuePath = "BebidaId";
         }
 
-
         private void BtnAdcionarBebida_Click(object sender, RoutedEventArgs e)
         {
-
+            bebida = new Bebida();
             int idBebida = Convert.ToInt32(cbBebida.SelectedValue);
             bebida = BebidaDAO.BuscarBebidaPorId(idBebida);
 
             listaBebidas.Add(bebida);
             dtaBebida.ItemsSource = listaBebidas;
             dtaBebida.Items.Refresh();
-
         }
 
 
         private void btnAddSabor_Click(object sender, RoutedEventArgs e)
         {
-
-            pizza = new Pizza();
-            
+            pizza = new Pizza();            
             int idTamanho = Convert.ToInt32(cbTamanho.SelectedValue);
             Tamanho t = TamanhoDAO.BuscarTamanhoPorId(idTamanho);
-            if (pizza.Tamanho == null)
-            {
-                pizza.Tamanho = t;
-            }
+            pizza.Tamanho = t;
             listaPizza.Add(pizza);
 
             sabor = new Sabor();
-
             int idSabor = Convert.ToInt32(cbSabor.SelectedValue);
             sabor = SaborDAO.BuscarSaborPorId(idSabor);
 
@@ -91,30 +89,84 @@ namespace WpfPizzaria.Views
 
         private void AddItensPedido_Click(object sender, RoutedEventArgs e)
         {
-            itemVenda = new ItemVenda();
 
+            itemVenda = new ItemVenda();
             itemVenda.Pizzas = listaPizza;
             itemVenda.Bebidas = listaBebidas;
-            itemVenda.Preco = pizza.Tamanho.Preco + bebida.Preco ;
+            double precoBebida = 0, precoPizza = 0;
+            foreach (var pizza in listaPizza)
+            {
+                precoPizza += pizza.Tamanho.Preco;
+            }
+            foreach (var bebida in listaBebidas)
+            {
+                precoBebida += bebida.Preco;
+            }
+            itemVenda.Preco = precoBebida + precoPizza;
             listaItemVenda.Add(itemVenda);
 
-            dtaItensVenda.ItemsSource = listaItemVenda;
+            dynamic d = new
+            {
+                Tamanho = pizza.Tamanho.Nome,
+                PreçoPizza = pizza.Tamanho.Preco,
+                SaboresQqtd = pizza.Tamanho.QtdSabores,
+                Bebida = bebida.Nome,
+                PreçoBebida = bebida.Preco,
+                Preço = pizza.Tamanho.Preco + bebida.Preco
+            };
+
+            ListaProdutos.Add(d);
+            dtaItensVenda.ItemsSource = ListaProdutos;
             dtaItensVenda.Items.Refresh();            
         }
 
-        public void LimparListasEDataGrid()
+        private void btnFecharPedido_Click(object sender, RoutedEventArgs e)
         {
-            //Zerando tamanhho pizza
-            pizza.Tamanho = null;
-            //Zerando as lista de sabores e bebidas para reutilizar
-            listaBebidas.Clear();
-            listaSabor.Clear();
-            listaPizza.Clear();
-            //Zerando as dataGrid para novos pedidos
-            dtaBebida.ItemsSource = listaBebidas;
-            dtaBebida.Items.Refresh();
-            dtaSabor.ItemsSource = listaSabor;
-            dtaSabor.Items.Refresh();
+            funcionario = new Funcionario();
+            funcionario.Cpf = txtCpfVendedor.Text;
+            funcionario = FuncionarioDAO.BuscarFuncionarioPorCpf(funcionario);
+
+            cliente = new Cliente();
+            cliente.Cpf = txtCpfCliente.Text;
+            cliente = ClienteDAO.BuncasClientePorCpf(cliente);
+
+            if (funcionario != null)
+            {
+                if (cliente != null)
+                {
+                    venda = new Venda();
+                    venda.Cliente = cliente;
+                    venda.Funcionario = funcionario;
+                    venda.ProdutosVenda = listaItemVenda;
+                    foreach (var item in listaItemVenda)
+                    {
+                        venda.Preco += itemVenda.Preco;
+                    }
+                    
+     
+                    listaVenda.Add(venda);
+
+                    dynamic d = new
+                    {
+                        Vendedor = funcionario.Nome,
+                        Cliente = cliente.Nome,
+                        Preco = venda.Preco,
+                        Data = venda.CriadoEm
+                    };
+                    listaViewVenda.Add(d);
+
+                    dtaVenda.ItemsSource = listaViewVenda;
+                    dtaVenda.Items.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não cadastrado!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Funcionario não cadastrado!!!");
+            }
         }
     }
 }
